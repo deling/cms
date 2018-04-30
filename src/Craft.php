@@ -115,6 +115,459 @@ class Craft extends Yii
         return array_merge(self::$_baseCookieConfig, $config);
     }
 
+    // Service Getters
+    // -------------------------------------------------------------------------
+
+    /**
+     * Returns the API service.
+     *
+     * @return \craft\services\Api The API service
+     */
+    public static function Api()
+    {
+        return self::$app->getApi();
+    }
+
+    /**
+     * Returns the assets service.
+     *
+     * @return \craft\services\Assets The assets service
+     */
+    public static function Assets()
+    {
+        return self::$app->getAssets();
+    }
+
+    /**
+     * Returns the asset indexing service.
+     *
+     * @return \craft\services\AssetIndexer The asset indexing service
+     */
+    public static function AssetIndexer()
+    {
+        return self::$app->getAssetIndexer();
+    }
+
+    /**
+     * Returns the asset transforms service.
+     *
+     * @return \craft\services\AssetTransforms The asset transforms service
+     */
+    public static function AssetTransforms()
+    {
+        return self::$app->getAssetTransforms();
+    }
+
+    /**
+     * Returns the categories service.
+     *
+     * @return \craft\services\Categories The categories service
+     */
+    public static function Categories()
+    {
+        return self::$app->getCategories();
+    }
+
+    /**
+     * Returns the Composer service.
+     *
+     * @return \craft\services\Composer The Composer service
+     */
+    public static function Composer()
+    {
+        return self::$app->getComposer();
+    }
+
+    /**
+     * Returns the config service.
+     *
+     * @return \craft\services\Config The config service
+     */
+    public static function Config()
+    {
+        return self::$app->getConfig();
+    }
+
+    /**
+     * Returns the content service.
+     *
+     * @return \craft\services\Content The content service
+     */
+    public static function Content()
+    {
+        return self::$app->getContent();
+    }
+
+    /**
+     * Returns the content migration manager.
+     *
+     * @return MigrationManager The content migration manager
+     */
+    public static function ContentMigrator(): MigrationManager
+    {
+        return self::$app->getContentMigrator();
+    }
+
+    /**
+     * Returns the dashboard service.
+     *
+     * @return \craft\services\Dashboard The dashboard service
+     */
+    public static function Dashboard()
+    {
+        return self::$app->getDashboard();
+    }
+
+    /**
+     * Returns the deprecator service.
+     *
+     * @return \craft\services\Deprecator The deprecator service
+     */
+    public static function Deprecator()
+    {
+        return self::$app->getDeprecator();
+    }
+
+    /**
+     * Returns the element indexes service.
+     *
+     * @return \craft\services\ElementIndexes The element indexes service
+     */
+    public static function ElementIndexes()
+    {
+        return self::$app->getElementIndexes();
+    }
+
+    /**
+     * Returns the elements service.
+     *
+     * @return \craft\services\Elements The elements service
+     */
+    public static function Elements()
+    {
+        return self::$app->getElements();
+    }
+
+    /**
+     * Returns the system email messages service.
+     *
+     * @return \craft\services\SystemMessages The system email messages service
+     */
+    public static function SystemMessages()
+    {
+        return self::$app->getSystemMessages();
+    }
+
+    /**
+     * Returns the entries service.
+     *
+     * @return \craft\services\Entries The entries service
+     */
+    public static function Entries()
+    {
+        return self::$app->getEntries();
+    }
+
+    /**
+     * Returns the entry revisions service.
+     *
+     * @return \craft\services\EntryRevisions The entry revisions service
+     */
+    public static function EntryRevisions()
+    {
+        return self::$app->getEntryRevisions();
+    }
+
+    /**
+     * Returns the feeds service.
+     *
+     * @return \craft\feeds\Feeds The feeds service
+     */
+    public static function Feeds()
+    {
+        return self::$app->getFeeds();
+    }
+
+    /**
+     * Returns the fields service.
+     *
+     * @return \craft\services\Fields The fields service
+     */
+    public static function Fields()
+    {
+        return self::$app->getFields();
+    }
+
+    /**
+     * Returns the globals service.
+     *
+     * @return \craft\services\Globals The globals service
+     */
+    public static function Globals()
+    {
+        return self::$app->getGlobals();
+    }
+
+    /**
+     * Returns the images service.
+     *
+     * @return \craft\services\Images The images service
+     */
+    public static function Images()
+    {
+        return self::$app->getImages();
+    }
+
+    /**
+     * Returns a Locale object for the target language.
+     *
+     * @return Locale The Locale object for the target language
+     */
+    public static function Locale(): Locale
+    {
+        return self::$app->getLocale();
+    }
+
+    /**
+     * Returns the current mailer.
+     *
+     * @return \craft\mail\Mailer The mailer component
+     */
+    public static function Mailer()
+    {
+        return self::$app->getMailer();
+    }
+
+    /**
+     * Returns the matrix service.
+     *
+     * @return \craft\services\Matrix The matrix service
+     */
+    public static function Matrix()
+    {
+        return self::$app->getMatrix();
+    }
+
+    /**
+     * Returns the application’s migration manager.
+     *
+     * @return MigrationManager The application’s migration manager
+     */
+    public static function Migrator(): MigrationManager
+    {
+        return self::$app->getMigrator();
+    }
+
+    /**
+     * Returns the application’s mutex service.
+     *
+     * @return Mutex The application’s mutex service
+     */
+    public static function Mutex(): Mutex
+    {
+        return self::$app->getMutex();
+    }
+
+    /**
+     * Returns the path service.
+     *
+     * @return \craft\services\Path The path service
+     */
+    public static function Path()
+    {
+        return self::$app->getPath();
+    }
+
+    /**
+     * Returns the plugins service.
+     *
+     * @return \craft\services\Plugins The plugins service
+     */
+    public static function Plugins()
+    {
+        return self::$app->getPlugins();
+    }
+
+    /**
+     * Returns the plugin store service.
+     *
+     * @return \craft\services\PluginStore The plugin store service
+     */
+    public static function PluginStore()
+    {
+        return self::$app->getPluginStore();
+    }
+
+    /**
+     * Returns the queue service.
+     *
+     * @return Queue|QueueInterface The queue service
+     */
+    public static function Queue()
+    {
+        return self::$app->getQueue();
+    }
+
+    /**
+     * Returns the relations service.
+     *
+     * @return \craft\services\Relations The relations service
+     */
+    public static function Relations()
+    {
+        return self::$app->getRelations();
+    }
+
+    /**
+     * Returns the routes service.
+     *
+     * @return \craft\services\Routes The routes service
+     */
+    public static function Routes()
+    {
+        return self::$app->getRoutes();
+    }
+
+    /**
+     * Returns the search service.
+     *
+     * @return \craft\services\Search The search service
+     */
+    public static function Search()
+    {
+        return self::$app->getSearch();
+    }
+
+    /**
+     * Returns the sections service.
+     *
+     * @return \craft\services\Sections The sections service
+     */
+    public static function Sections()
+    {
+        return self::$app->getSections();
+    }
+
+    /**
+     * Returns the sites service.
+     *
+     * @return \craft\services\Sites The sites service
+     */
+    public static function Sites()
+    {
+        return self::$app->getSites();
+    }
+
+    /**
+     * Returns the structures service.
+     *
+     * @return \craft\services\Structures The structures service
+     */
+    public static function Structures()
+    {
+        return self::$app->getStructures();
+    }
+
+    /**
+     * Returns the system settings service.
+     *
+     * @return \craft\services\SystemSettings The system settings service
+     */
+    public static function SystemSettings()
+    {
+        return self::$app->getSystemSettings();
+    }
+
+    /**
+     * Returns the tags service.
+     *
+     * @return \craft\services\Tags The tags service
+     */
+    public static function Tags()
+    {
+        return self::$app->getTags();
+    }
+
+    /**
+     * Returns the template cache service.
+     *
+     * @return \craft\services\TemplateCaches The template caches service
+     */
+    public static function TemplateCaches()
+    {
+        return self::$app->getTemplateCaches();
+    }
+
+    /**
+     * Returns the tokens service.
+     *
+     * @return \craft\services\Tokens The tokens service
+     */
+    public static function Tokens()
+    {
+        return self::$app->getTokens();
+    }
+
+    /**
+     * Returns the updates service.
+     *
+     * @return \craft\services\Updates The updates service
+     */
+    public static function Updates()
+    {
+        return self::$app->getUpdates();
+    }
+
+    /**
+     * Returns the user groups service.
+     *
+     * @return \craft\services\UserGroups The user groups service
+     */
+    public static function UserGroups()
+    {
+        return self::$app->getUserGroups();
+    }
+
+    /**
+     * Returns the user permissions service.
+     *
+     * @return \craft\services\UserPermissions The user permissions service
+     */
+    public static function UserPermissions()
+    {
+        return self::$app->getUserPermissions();
+    }
+
+    /**
+     * Returns the users service.
+     *
+     * @return \craft\services\Users The users service
+     */
+    public static function Users()
+    {
+        return self::$app->getUsers();
+    }
+
+    /**
+     * Returns the utilities service.
+     *
+     * @return \craft\services\Utilities The utilities service
+     */
+    public static function Utilities()
+    {
+        return self::$app->getUtilities();
+    }
+
+    /**
+     * Returns the volumes service.
+     *
+     * @return \craft\services\Volumes The volumes service
+     */
+    public static function Volumes()
+    {
+        return self::$app->getVolumes();
+    }
+
     /**
      * Class autoloader.
      *
